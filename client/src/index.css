@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  transition: all 0.2s ease;
+  background: var(--background);
+}
+
+:root {
+  --background: hsl(60, 10%, 95%);
+  --text-100: hsl(0, 0%, 11%);
+  --text-200: hsl(0, 0%, 43%);
+  --text-300: hsl(0, 0%, 50%);
+
+  --background-dark: hsl(0, 0%, 9%);
+  --text-100-dark: hsl(44, 44%, 95%);
+  --text-300-dark: hsl(0, 0%, 50%);
+
+  --btn-margin: 6px !important;
+}
+
+[data-theme="dark"] {
+  --background: hsl(0, 0%, 9%);
+  --text-100: hsl(44, 44%, 95%);
+  --text-200: hsl(0, 0%, 50%);
+  --text-300: hsl(0, 0%, 50%);
+  --btn-margin: -2px;
+}
+
+.header {
+  height: 25vh;
+  width: 100vw;
+}
+.container,
+.add-poem-container {
+  width: 100%;
+  height: 100vh;
+  font-family: "Ibarra Real Nova", serif;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--text-100);
+}
+
+.random-container {
+  margin: 0 auto;
+  white-space: pre-line;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: fit-content;
+  /* max-width: 500px; */
+  padding-bottom: 10rem;
+  color: var(--text-100);
+}
+
+.title {
+  font-size: 1.15rem;
+  /* font-style: italic; */
+
+  font-weight: 600;
+}
+
+.author {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-200);
+  letter-spacing: 1px;
+
+  text-align: end;
+  margin-top: 1rem;
+}
+
+.add-poem-form {
+  width: 50vw;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.author-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.title-input {
+  width: 79.5%;
+}
+
+input,
+textarea,
+select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--text-200);
+  outline: none;
+  color: var(--text-100);
+}
+
+textarea {
+  width: 100%;
+  height: 400px;
+}
+
+.submit-btn {
+  float: right;
+  width: 200px;
+  padding: 5px 10px;
+  background: var(--text-100);
+  outline: none;
+  border: 1px solid var(--text-100);
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+select,
+option {
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: salmon;
+}
+
+.docs-link {
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, 0%);
+  -ms-transform: translateY(-50%);
+  left: 0;
+  transform: rotate(270deg);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-300);
+  transition: all 0.2s ease;
+  font-weight: 400;
+  font-size: 0.95em;
+}
+
+a:hover,
+.mode-btn:hover {
+  color: var(--text-100);
+}
+
+.mode-btn {
+  font-size: 0.95em;
+  font-family: "Ibarra Real Nova", serif;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, 0%);
+  -ms-transform: translateY(-50%);
+  right: var(--btn-margin);
+  cursor: pointer;
+  transform: rotate(90deg);
+  border: none;
+  outline: none;
+  background: transparent;
+  /* padding-top: var(--btn-margin) !important; */
+  color: var(--text-300);
+  transition: color 0.2s ease;
+}
