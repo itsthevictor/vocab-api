@@ -1,3 +1,1 @@
-Romanian poetry api
-
-Get random poem in json format
+vocabulary api
