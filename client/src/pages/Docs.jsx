@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 
 export const docsLoader = async () => {
   try {
-    const { data } = await mainFetch.get("/poem/stats");
+    const { data } = await mainFetch.get("/definition/stats");
     return data;
   } catch (error) {
     console.log(error);
@@ -13,6 +13,6 @@ export const docsLoader = async () => {
 };
 const Docs = () => {
   const { count } = useLoaderData();
-  return <div className="container">{count}&nbsp;poems</div>;
+  return <div className="container">{count}&nbsp;words</div>;
 };
 export default Docs;

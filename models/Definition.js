@@ -4,7 +4,7 @@ const DefinitionSchema = new mongoose.Schema({
   word: String,
   phonetics: String,
   def: String,
-  example: string,
+  example: String,
   categories: [],
 });
 
