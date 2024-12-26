@@ -6,3 +6,5 @@ export const categories = [
   "Psihologie",
   "Filosofie",
 ];
+
+export const parts = ["substantiv", "verb", "adjectiv", "adverb"];

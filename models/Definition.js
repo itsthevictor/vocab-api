@@ -5,7 +5,8 @@ const DefinitionSchema = new mongoose.Schema({
   phonetics: String,
   def: String,
   example: String,
-  categories: [],
+  part: String,
+  category: [],
 });
 
 export default mongoose.model("Definition", DefinitionSchema);
